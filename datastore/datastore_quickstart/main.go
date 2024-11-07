@@ -33,12 +33,10 @@ func main() {
 	ctx := context.Background()
 
 	// Set your Google Cloud Platform project ID.
-	projectID := ""
-	// Set your Database ID if not using (default), otherwise leave it empty
-	databaseID := ""
+	projectID := "YOUR_PROJECT_ID"
 
 	// Creates a client.
-	client, err := datastore.NewClientWithDatabase(ctx, projectID, databaseID)
+	client, err := datastore.NewClient(ctx, projectID)
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}
